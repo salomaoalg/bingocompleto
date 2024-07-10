@@ -1,0 +1,5 @@
+.lados{
+    display: flex;
+    background-color: aquamarine;
+    flex-wrap: wrap;
+  }

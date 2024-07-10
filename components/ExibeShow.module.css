@@ -1,0 +1,13 @@
+.show{
+    width: 50.5vw;
+    height: 33.5vw;
+    font-size: 20vw;
+    margin-left: 1.4vw;
+    background-color: yellow;
+    border: 2px solid black;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
