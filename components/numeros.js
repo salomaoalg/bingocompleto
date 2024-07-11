@@ -1,5 +1,25 @@
+"use client"; // This is a client component
 import styles from './numeros.module.css'
+import { useEffect, useRef } from 'react';
+
 export default function Numeros() {
+
+    function MyComponent(){
+        const myRef = useRef(null);
+    
+        useEffect(() => {
+            myRef.current.addEventListener('click', exibeshow);
+            return()=>{
+                myRef.current.removeEventListener('click', exibeshow)
+            };
+        },[]);
+    
+        const exibeshow = (event) => {
+            console.log('Function is ok');
+        };
+    
+    }
+    
     return (
         <div>
             <table className={styles.borda}>
@@ -8,7 +28,7 @@ export default function Numeros() {
                     <th className={styles.borda} colSpan={5}>BINGO</th>
                 </tr>
                 <tr>
-                    <td ><button>B-1</button></td>
+                    <td ><button ref={myRef}>B-1</button></td>
                     <td ><button>I-19</button></td>
                     <td ><button>N-37</button></td>
                     <td ><button>G-55</button></td>

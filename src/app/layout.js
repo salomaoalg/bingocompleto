@@ -9,7 +9,7 @@ export default function Home() {
       <body>
         <div className={style.lados}>
           <Numeros />
-          <ExibeShow />
+          <ExibeShow/>
         </div>
       </body>
     </html>
