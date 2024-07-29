@@ -1,15 +1,16 @@
 "use client"; // This is a client component
 import styles from './numeros.module.css'
-import {useEffect} from 'react';
-
-useEffect(()=>{
-    const texto = document.querySelector('#numero');
-},[]);
-
-const [click, Setclick] = React.useState(0);
+import ExibeShow from '../exibeshow/page';
+import { useEffect } from 'react';
 
 export default function Numeros() {
 
+    function exibir(){
+        let numero = document.querySelector('#numero').textContent;
+        alert(numero);
+
+        <ExibeShow exibenumero={numero}/>
+    }
     return (
         <div>
             <table className={styles.borda}>
@@ -18,7 +19,7 @@ export default function Numeros() {
                     <th className={styles.borda} colSpan={5}>BINGO</th>
                 </tr>
                 <tr>
-                    <td ><button id='numero'>B-1</button></td>
+                    <td ><button onClick={exibir} id='numero'>B-1</button></td>
                     <td ><button>I-19</button></td>
                     <td ><button>N-37</button></td>
                     <td ><button>G-55</button></td>

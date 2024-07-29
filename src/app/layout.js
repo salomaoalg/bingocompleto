@@ -1,6 +1,6 @@
 import "./globals.css";
-import Numeros from "../../components/numeros";
-import ExibeShow from "../../components/ExibeShow";
+import Numeros from "./numeros/page";
+import ExibeShow from "./exibeshow/page";
 import style from './layout.module.css'
 
 export default function Home() {
@@ -9,7 +9,7 @@ export default function Home() {
       <body>
         <div className={style.lados}>
           <Numeros />
-          <ExibeShow/>
+          <ExibeShow />
         </div>
       </body>
     </html>
